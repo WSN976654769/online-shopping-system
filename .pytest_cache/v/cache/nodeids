@@ -1,0 +1,4 @@
+[
+  "test_module.py::test_add_with_correct_values",
+  "test_module.py::test_multiply_with_correct_values"
+]

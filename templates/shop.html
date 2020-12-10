@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block body %}
+<head>
+  <link rel="stylesheet" type="text/css" media="screen" href="base.css" />
+</head>
+
+<div class="body_style">
+<br>
+    <h1>We have {{ items|length }} items for sell.</h1>
+<table id="customers">
+  <col width="40">
+  <col width="80">
+  <col width="80">
+  <col width="80">
+  <col width="80">
+  <col width="80">
+
+  <tr>
+    <th>Action</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Size</th>
+    <th>Color</th>
+
+  </tr>
+    {% for i in items %}
+        <tr>
+        <td><form method="post">
+    <input hidden name="id", value="{{ i.item_code }}">
+    <input type="number" name="qty" placeholder="quantity" required>
+    <button>Add To Cart</button>
+</form></td>
+
+
+{% for j in i.__dict__.items() %}
+    {% if j[0] not in hidden_traits %}
+        <td>{{ j[1] }}</td>>
+    {% endif %}
+{% endfor %}
+
+        </tr>
+{% endfor %}
+
+</table>
+
+</div>
+{% endblock %}
