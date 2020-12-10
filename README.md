@@ -1,4 +1,4 @@
-# online-shopping-system-
+# online-shopping-system
 Catmandont Pty Ltd is a camping gear store wishing to start up their online shopping system to attract more customers since online shopping is where most buyers shop now.
 
 The following base definitions are as below:
